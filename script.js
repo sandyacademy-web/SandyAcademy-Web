@@ -54,3 +54,85 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+/* ==========================================
+   COUNTER PROMO
+========================================== */
+
+let kuota = 10;
+
+const kuotaElement = document.getElementById("kuota");
+
+if (kuotaElement) {
+    kuotaElement.innerText = kuota;
+}
+
+/* ==========================================
+   SMOOTH SCROLL MENU
+========================================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            target.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
+/* ==========================================
+   FLOATING BUTTON EFFECT
+========================================== */
+
+const waButton = document.querySelector(".floating-wa");
+
+if(waButton){
+
+    setInterval(()=>{
+
+        waButton.style.transform="scale(1.08)";
+
+        setTimeout(()=>{
+
+            waButton.style.transform="scale(1)";
+
+        },500);
+
+    },3000);
+
+}
+
+/* ==========================================
+   GALLERY HOVER
+========================================== */
+
+document.querySelectorAll(".gallery-item img").forEach(img=>{
+
+    img.addEventListener("mouseenter",()=>{
+
+        img.style.filter="brightness(110%)";
+
+    });
+
+    img.addEventListener("mouseleave",()=>{
+
+        img.style.filter="brightness(100%)";
+
+    });
+
+});
+
+console.log("Sandy Academy Barber v1.0 Loaded");
