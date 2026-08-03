@@ -1,1 +1,176 @@
+/* ======================================================
+   SANDY ACADEMY BARBER
+   STYLE.CSS
+   ====================================================== */
 
+:root{
+  --gold:#d4af37;
+  --dark:#111111;
+  --black:#000000;
+  --white:#ffffff;
+  --gray:#999999;
+  --light:#f5f5f5;
+
+  --radius:18px;
+  --shadow:0 10px 35px rgba(0,0,0,.35);
+
+  --transition:.35s ease;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--dark);
+  color:var(--white);
+  overflow-x:hidden;
+  line-height:1.7;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+section{
+  padding:90px 8%;
+}
+
+.container{
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:999;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,.70);
+  backdrop-filter:blur(12px);
+}
+
+.logo{
+  color:var(--gold);
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+nav{
+  display:flex;
+  gap:28px;
+}
+
+nav a{
+  color:white;
+  font-weight:500;
+  transition:var(--transition);
+}
+
+nav a:hover{
+  color:var(--gold);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,.65),
+  rgba(0,0,0,.75)),
+  url("images/hero.jpg");
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero-content{
+  max-width:850px;
+}
+
+.hero h1{
+  font-size:72px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.hero span{
+  color:var(--gold);
+}
+
+.hero p{
+  font-size:22px;
+  margin-bottom:40px;
+}
+
+.button{
+  display:inline-block;
+  padding:16px 34px;
+  border-radius:50px;
+  font-weight:600;
+  margin:8px;
+  transition:var(--transition);
+}
+
+.button:hover{
+  transform:translateY(-6px);
+}
+
+.ig{
+  background:#E1306C;
+  color:white;
+}
+
+.wa{
+  background:#25D366;
+  color:white;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.title{
+  text-align:center;
+  font-size:44px;
+  color:var(--gold);
+  margin-bottom:18px;
+}
+
+.subtitle{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+  color:#ddd;
+  margin-bottom:60px;
+}
