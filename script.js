@@ -136,3 +136,73 @@ document.querySelectorAll(".gallery-item img").forEach(img=>{
 });
 
 console.log("Sandy Academy Barber v1.0 Loaded");
+
+/*=========================
+FULLSCREEN SLIDER
+==========================*/
+
+const slides=document.querySelectorAll(".slide");
+
+const dots=document.querySelectorAll(".dot");
+
+let current=0;
+
+function showSlide(i){
+
+slides.forEach(s=>s.classList.remove("active"));
+
+dots.forEach(d=>d.classList.remove("active"));
+
+slides[i].classList.add("active");
+
+dots[i].classList.add("active");
+
+}
+
+function nextSlide(){
+
+current++;
+
+if(current>=slides.length){
+
+current=0;
+
+}
+
+showSlide(current);
+
+}
+
+setInterval(nextSlide,4000);
+
+document.querySelector(".next").onclick=()=>{
+
+nextSlide();
+
+};
+
+document.querySelector(".prev").onclick=()=>{
+
+current--;
+
+if(current<0){
+
+current=slides.length-1;
+
+}
+
+showSlide(current);
+
+};
+
+dots.forEach((dot,index)=>{
+
+dot.onclick=()=>{
+
+current=index;
+
+showSlide(current);
+
+};
+
+});
