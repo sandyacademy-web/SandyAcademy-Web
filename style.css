@@ -154,15 +154,11 @@ z-index:-1;
 
 .hero-logo{
 
-font-size:90px;
+width:240px;
 
-font-weight:800;
+max-width:80%;
 
-color:#D4AF37;
-
-letter-spacing:8px;
-
-margin-bottom:20px;
+margin-bottom:30px;
 
 }
 
@@ -211,22 +207,6 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-}
-
-.hero{
-  height:100vh;
-  background:
-  linear-gradient(rgba(0,0,0,.65),
-  rgba(0,0,0,.75)),
-  url("images/hero.jpg");
-
-  background-size:cover;
-  background-position:center;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
 }
 
 .hero-content{
