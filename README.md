@@ -1,4 +1,4 @@
-# SandyAcademy-Web.
+# SandyAcademy-Web
 
 Official website project for Sandy Academy Barber.
 
