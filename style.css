@@ -590,6 +590,106 @@ font-size:22px;
   box-shadow:var(--shadow);
 }
 
+.location{
+
+padding:120px 20px;
+
+background:#101010;
+
+}
+
+.location h2{
+
+text-align:center;
+
+font-size:48px;
+
+color:#D4AF37;
+
+margin-bottom:20px;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+max-width:760px;
+
+margin:auto;
+
+margin-bottom:60px;
+
+font-size:20px;
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+.location-card{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:40px;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.location-map img{
+
+width:100%;
+
+max-width:600px;
+
+border-radius:25px;
+
+box-shadow:0 15px 45px rgba(0,0,0,.35);
+
+}
+
+.location-info{
+
+max-width:420px;
+
+}
+
+.location-info h3{
+
+font-size:34px;
+
+margin-bottom:20px;
+
+color:#D4AF37;
+
+}
+
+.location-info p{
+
+font-size:19px;
+
+line-height:1.8;
+
+margin-bottom:25px;
+
+}
+
+.maps{
+
+background:#D4AF37;
+
+color:#111;
+
+font-weight:bold;
+
+}
+
 /* ==========================================
    FOOTER
 ========================================== */
