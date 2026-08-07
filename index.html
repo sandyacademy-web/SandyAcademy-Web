@@ -54,14 +54,18 @@ SANDY ACADEMY
 </header>
 
    <section class="hero">
+<section class="hero">
 
-    <video class="hero-video"
-    autoplay
-    muted
-    loop
-    playsinline>
+    <video
+        id="heroVideo"
+        class="hero-video"
+        autoplay
+        muted
+        playsinline
+        preload="auto">
 
-    <source src="videos/lv_0_20260806115113.webm" type="video/webm">
+        <source src="videos/lv_0_20260806115113.webm"
+                type="video/webm">
 
     </video>
 
@@ -69,9 +73,16 @@ SANDY ACADEMY
 
     <div class="hero-content">
 
-        <img src="images/logo.webp"
-             class="hero-logo"
-             alt="Sandy Academy">
+        <img
+            src="images/logo.webp"
+            class="hero-logo"
+            alt="Sandy Academy">
+
+        <p>Korean Style Specialist</p>
+
+        <a href="#booking" class="button wa">
+            Booking WhatsApp
+        </a>
 
     </div>
 
@@ -519,6 +530,42 @@ class="floating-wa">
 
 <script src="script.js"></script>
 
+<script>
+
+const heroVideo = document.getElementById("heroVideo");
+
+const playlist = [
+
+"videos/lv_0_20260806115113.webm",
+
+"videos/lv_0_20260805115343.webm",
+
+"videos/intro.webm"
+
+];
+
+let current = 0;
+
+heroVideo.addEventListener("ended", () => {
+
+current++;
+
+if(current >= playlist.length){
+
+current = 0;
+
+}
+
+heroVideo.src = playlist[current];
+
+heroVideo.load();
+
+heroVideo.play();
+
+});
+
+</script>      
+      
 </body>
 
 </html>  
