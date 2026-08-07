@@ -62,10 +62,6 @@ SANDY ACADEMY
         muted
         playsinline
         preload="auto">
-
-        <source src="videos/lv_0_20260805115343.webm"
-                type="video/webm">
-
     </video>
 
     <div class="overlay"></div>
@@ -79,7 +75,9 @@ SANDY ACADEMY
 
         <p>Korean Style Specialist</p>
 
-        <a href="#booking" class="button wa">
+        <a
+            href="#booking"
+            class="button wa">
             Booking WhatsApp
         </a>
 
@@ -532,34 +530,103 @@ class="floating-wa">
 <script>
 
 const heroVideo = document.getElementById("heroVideo");
+const heroContent = document.querySelector(".hero-content");
+
+/* ==========================================
+   PLAYLIST HERO
+========================================== */
 
 const playlist = [
 
-"videos/lv_0_20260806115113.webm",
+    "videos/lv_0_20260806115113.webm",
 
-"videos/lv_0_20260805115343.webm",
+    "videos/lv_0_20260805115343.webm"
 
 ];
 
-let current = 0;
+let currentVideo = 0;
 
-heroVideo.addEventListener("ended", () => {
 
-current++;
+/* ==========================================
+   MULAI VIDEO
+========================================== */
 
-if(current >= playlist.length){
+function playHeroVideo(index){
 
-current = 0;
+    currentVideo = index;
+
+    heroContent.classList.add("hero-hidden");
+
+    heroVideo.src = playlist[currentVideo];
+
+    heroVideo.load();
+
+    heroVideo.play().catch(error => {
+
+        console.log("Autoplay menunggu izin browser:", error);
+
+    });
 
 }
 
-heroVideo.src = playlist[current];
 
-heroVideo.load();
+/* ==========================================
+   SAAT VIDEO BERGANTI
+========================================== */
 
-heroVideo.play();
+heroVideo.addEventListener("ended", function(){
+
+    currentVideo++;
+
+    if(currentVideo >= playlist.length){
+
+        currentVideo = 0;
+
+    }
+
+    playHeroVideo(currentVideo);
 
 });
+
+
+/* ==========================================
+   KONTROL LOGO / TAGLINE / BUTTON
+========================================== */
+
+heroVideo.addEventListener("timeupdate", function(){
+
+    const duration = heroVideo.duration;
+    const currentTime = heroVideo.currentTime;
+
+    if(!duration || !isFinite(duration)){
+        return;
+    }
+
+    /*
+       Konten tetap tersembunyi
+       sampai memasuki 2 detik terakhir.
+    */
+
+    const lastTwoSeconds = duration - 2;
+
+    if(currentTime >= lastTwoSeconds){
+
+        heroContent.classList.remove("hero-hidden");
+
+    }else{
+
+        heroContent.classList.add("hero-hidden");
+
+    }
+
+});
+
+
+/* ==========================================
+   MULAI PLAYLIST
+========================================== */
+
+playHeroVideo(0);
 
 </script>      
       
