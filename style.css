@@ -106,126 +106,65 @@ nav a:hover{
 }
 
 /* =========================
-   HERO
+   HERO (FINAL)
 ========================= */
 
 .hero{
-
-position:relative;
-
-height:100vh;
-
-overflow:hidden;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:#000;
 }
 
 .hero-video{
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-z-index:-2;
-
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:1;
 }
 
 .overlay{
     position:absolute;
     inset:0;
     background:rgba(0,0,0,.45);
-    z-index:-1;
+    z-index:2;
+}
+
+.hero-content{
+    position:relative;
+    z-index:3;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    max-width:850px;
+    padding:20px;
 }
 
 .hero-logo{
-
-width:240px;
-
-max-width:80%;
-
-margin-bottom:30px;
-
+    width:260px;
+    max-width:80%;
+    margin-bottom:30px;
+    filter:drop-shadow(0 10px 25px rgba(212,175,55,.45));
 }
 
 .hero h1{
-
-font-size:52px;
-
-margin-bottom:10px;
-
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:15px;
 }
 
 .hero p{
-
-font-size:24px;
-
-margin-bottom:40px;
-
-}
-
-.hero{
-position:relative;
-height:100vh;
-overflow:hidden;
-}
-
-.hero-video{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.55);
-}
-
-.hero-content{
-position:relative;
-z-index:5;
-height:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.hero-content{
-  max-width:850px;
-}
-
-.hero h1{
-  font-size:72px;
-  line-height:1.1;
-  margin-bottom:20px;
-}
-
-.hero span{
-  color:var(--gold);
-}
-
-.hero p{
-  font-size:22px;
-  margin-bottom:40px;
+    font-size:22px;
+    margin-bottom:40px;
 }
 
 .button{
@@ -919,12 +858,18 @@ background:#D4AF37;
 
 }
 
-@media (min-width:768px){
+@media(max-width:768px){
 
 .hero-logo{
+width:240px;
+}
 
-width:380px;
+.hero h1{
+font-size:42px;
+}
 
+.hero p{
+font-size:18px;
 }
 
 }
