@@ -168,11 +168,11 @@ nav a:hover{
 /* LOGO */
 
 .hero-logo{
-    width:180px;
-    max-width:60%;
+    width:300px;
+    max-width:80%;
     height:auto;
 
-    margin-bottom:20px;
+    margin-bottom:30px;
 
     filter:
         drop-shadow(0 8px 20px rgba(0,0,0,.55));
