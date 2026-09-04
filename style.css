@@ -322,6 +322,123 @@ margin-bottom:18px;
 
 }
 
+/* ================================
+   QR CONNECT SECTION
+================================ */
+
+.qr-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #0d0d0d;
+}
+
+.qr-heading {
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.qr-heading h2 {
+    font-size: 2.2rem;
+    margin: 10px 0;
+}
+
+.qr-heading p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+.qr-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.qr-card {
+    display: block;
+    background: #181818;
+    border: 1px solid #292929;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: .3s ease;
+}
+
+.qr-card:hover {
+    transform: translateY(-7px);
+    border-color: #d4af37;
+}
+
+.qr-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.qr-card h3 {
+    margin: 10px 0 20px;
+    font-size: 1.15rem;
+}
+
+.qr-image {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 18px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.qr-card strong {
+    display: inline-block;
+    color: #d4af37;
+    letter-spacing: 2px;
+    font-size: .85rem;
+}
+
+.qr-card p {
+    color: #999;
+    font-size: .85rem;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.qr-footer {
+    margin-top: 50px;
+}
+
+.qr-footer p {
+    margin-bottom: 5px;
+}
+
+.qr-footer small {
+    color: #777;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .qr-grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+    }
+
+    .qr-heading h2 {
+        font-size: 1.7rem;
+    }
+
+    .qr-card {
+        padding: 28px 20px;
+    }
+
+}
+
 /* ==========================================
    GALLERY
 ========================================== */
